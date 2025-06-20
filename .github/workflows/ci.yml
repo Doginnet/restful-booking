@@ -22,5 +22,8 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install
 
+      - name: 🔧 Fix permissions for node binaries
+        run: chmod +x node_modules/.bin/*
+
       - name: ✅ Run tests
         run: npm test
