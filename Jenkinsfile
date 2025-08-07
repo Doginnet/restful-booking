@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'any' // если есть Jenkins-нода с Linux (или просто 'any', если одна нода)
-  }
+  agent 'any' // если есть Jenkins-нода с Linux (или просто 'any', если одна нода)
 
   tools {
     nodejs 'node18' // Укажем позже в Jenkins настройки
