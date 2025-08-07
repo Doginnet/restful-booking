@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'linux' // если есть Jenkins-нода с Linux (или просто 'any', если одна нода)
+    label 'any' // если есть Jenkins-нода с Linux (или просто 'any', если одна нода)
   }
 
   tools {
