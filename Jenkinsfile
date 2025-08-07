@@ -1,8 +1,8 @@
 pipeline {
-  agent 'any' // если есть Jenkins-нода с Linux (или просто 'any', если одна нода)
+  agent any
 
   tools {
-    nodejs 'node18' // Укажем позже в Jenkins настройки
+    nodejs 'node18'
   }
 
   environment {
@@ -18,22 +18,13 @@ pipeline {
 
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
-      }
-    }
-
-    stage('Fix permissions (optional)') {
-      when {
-        expression { isUnix() }
-      }
-      steps {
-        sh 'chmod +x node_modules/.bin/*'
+        bat 'npm install'
       }
     }
 
     stage('Run tests') {
       steps {
-        sh 'npm test'
+        bat 'npm test'
       }
     }
   }
