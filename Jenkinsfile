@@ -4,7 +4,7 @@ pipeline {
   }
 
   tools {
-    nodejs 'Node18' // Укажем позже в Jenkins настройки
+    nodejs 'node18' // Укажем позже в Jenkins настройки
   }
 
   environment {
